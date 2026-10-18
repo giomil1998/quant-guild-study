@@ -5,3 +5,5 @@ __pycache__/
 .DS_Store
 # cached market data: re-downloadable, keep the repo light
 data/
+# PyCharm project settings (machine-specific)
+.idea/

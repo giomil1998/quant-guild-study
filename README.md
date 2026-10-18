@@ -15,6 +15,10 @@ Each notebook rebuilds a lecture's idea from scratch and then pushes it further:
 
 The full learning path (8 modules, ~80 lectures) is in **[ROADMAP.md](ROADMAP.md)**.
 
+## How I'm studying
+
+A 20-week plan at 2 hours a day ([study plan PDF](study/Study_Plan.pdf)). Each project starts as a notebook of tasks with self-checking checkpoints. I write the code, then extend the idea on real data. Progress is in the [learning log](study/LEARNING_LOG.md).
+
 ## Run it yourself
 
 ```bash
@@ -32,8 +36,9 @@ Market data downloads on first run and is cached in `data/` (git-ignored).
 
 ```
 notebooks/NN_topic/   one folder per project, numbered in roadmap order
-src/qgs/              shared helpers: free data loader (with cache), plot style
+src/qgs/              shared helpers: free data loader (with cache), plot style, checkpoints
 assets/               headline figures used in this README
+study/                study plan (PDF + generator) and learning log
 ROADMAP.md            lecture-by-lecture learning path and progress
 ```
 

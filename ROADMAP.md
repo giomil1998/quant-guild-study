@@ -17,8 +17,8 @@ Why most trading P&L is noise, what an edge actually is, and how bet sizing deci
 
 | | # | Lecture |
 |---|---|---|
-| 🟡 | 22 | [How to Trade](https://github.com/romanmichaelpaolucci/Quant-Guild-Library/tree/main/2025%20Video%20Lectures/22.%20How%20to%20Trade) |
-| ⬜ | 3 | [How to Make & Lose Money Trading](https://github.com/romanmichaelpaolucci/Quant-Guild-Library/tree/main/2025%20Video%20Lectures/3.%20How%20to%20Make%20%26%20Lose%20Money%20Trading) |
+| ✅ | 22 | [How to Trade](https://github.com/romanmichaelpaolucci/Quant-Guild-Library/tree/main/2025%20Video%20Lectures/22.%20How%20to%20Trade) |
+| 🟡 | 3 | [How to Make & Lose Money Trading](https://github.com/romanmichaelpaolucci/Quant-Guild-Library/tree/main/2025%20Video%20Lectures/3.%20How%20to%20Make%20%26%20Lose%20Money%20Trading) |
 | ⬜ | 4 | [Analyzing Trading Strategy Performance Over Time](https://github.com/romanmichaelpaolucci/Quant-Guild-Library/tree/main/2025%20Video%20Lectures/4.%20Analyzing%20Trading%20Strategy%20Performance%20Over%20Time) |
 | ⬜ | 26 | [Is Quant Trading Gambling - Roulette, Poker, and Trading](https://github.com/romanmichaelpaolucci/Quant-Guild-Library/tree/main/2025%20Video%20Lectures/26.%20Is%20Quant%20Trading%20Gambling%20-%20Roulette%2C%20Poker%2C%20and%20Trading) |
 | ⬜ | 28 | [Gambler's Ruin Problem in Quant Trading](https://github.com/romanmichaelpaolucci/Quant-Guild-Library/tree/main/2025%20Video%20Lectures/28.%20Gambler%27s%20Ruin%20Problem%20in%20Quant%20Trading) |

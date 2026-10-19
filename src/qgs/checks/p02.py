@@ -3,7 +3,7 @@
 import numpy as np
 from scipy import stats
 
-from qgs.checks import call, close, is_todo, report, todo
+from qgs.checks import call, close, is_todo, report, scalars, todo
 
 
 def task1_1(estimate_p):
@@ -81,6 +81,10 @@ def task2_2(sd_err_vs_half_1000, sd_theory_10):
     name = "Task 2.2 law of total variance"
     if is_todo(sd_err_vs_half_1000) or is_todo(sd_theory_10):
         return todo(name)
+    v = scalars(name, sd_err_vs_half_1000=sd_err_vs_half_1000, sd_theory_10=sd_theory_10)
+    if v is None:
+        return False
+    sd_err_vs_half_1000, sd_theory_10 = v["sd_err_vs_half_1000"], v["sd_theory_10"]
     ok1 = close(sd_err_vs_half_1000, np.sqrt(0.24 / 1000 + 0.01), 0.008)
     ok2 = close(sd_theory_10, np.sqrt(0.24 / 10 + 0.01), 0.003)
     if not ok1:
@@ -97,6 +101,11 @@ def task3_1(p_win, avg_win, avg_loss, edge_total_expectation, mean_pl):
     vals = [p_win, avg_win, avg_loss, edge_total_expectation, mean_pl]
     if any(is_todo(v) for v in vals):
         return todo(name)
+    v = scalars(name, p_win=p_win, avg_win=avg_win, avg_loss=avg_loss,
+                edge_total_expectation=edge_total_expectation, mean_pl=mean_pl)
+    if v is None:
+        return False
+    p_win, avg_win, avg_loss, edge_total_expectation, mean_pl = v.values()
     target = dict(p_win=4 / 7, avg_win=115.0, avg_loss=-150.0, edge=10 / 7)
     got = dict(p_win=p_win, avg_win=avg_win, avg_loss=avg_loss, edge=edge_total_expectation)
     wrong = [k for k in target if not close(got[k], target[k], 1e-6)]
@@ -127,6 +136,10 @@ def task3_3(curves, prob_losing_year):
     name = "Task 3.3 equity curves"
     if is_todo(curves) or is_todo(prob_losing_year):
         return todo(name)
+    v = scalars(name, prob_losing_year=prob_losing_year)
+    if v is None:
+        return False
+    prob_losing_year = v["prob_losing_year"]
     c = np.asarray(curves, dtype=float)
     if c.shape != (1000, 252):
         return report(name, False, f"curves has shape {c.shape}, expected (1000, 252)",
@@ -146,6 +159,10 @@ def task3_4(prob_profitable):
     name = "Task 3.4 how sure can 7 trades make you?"
     if is_todo(prob_profitable):
         return todo(name)
+    v = scalars(name, prob_profitable=prob_profitable)
+    if v is None:
+        return False
+    prob_profitable = v["prob_profitable"]
     target = 1 - stats.beta.cdf(150 / 265, 5, 4)
     if not close(prob_profitable, target, 0.01):
         return report(name, False, f"prob_profitable = {prob_profitable:.3f}",
@@ -157,6 +174,10 @@ def task4_1(rets, p_win, edge_bps):
     name = "Task 4.1 SPY edge decomposition"
     if any(is_todo(v) for v in (rets, p_win, edge_bps)):
         return todo(name)
+    v = scalars(name, p_win=p_win, edge_bps=edge_bps)
+    if v is None:
+        return False
+    p_win, edge_bps = v["p_win"], v["edge_bps"]
     r = np.asarray(rets, dtype=float)
     if np.isnan(r).any():
         return report(name, False, "rets contains NaN", "drop the first row after pct_change()")
@@ -174,6 +195,10 @@ def task4_2(ci_low, ci_high, rets):
     name = "Task 4.2 bootstrap CI"
     if any(is_todo(v) for v in (ci_low, ci_high, rets)):
         return todo(name)
+    v = scalars(name, ci_low=ci_low, ci_high=ci_high)
+    if v is None:
+        return False
+    ci_low, ci_high = v["ci_low"], v["ci_high"]
     r = np.asarray(rets, dtype=float)
     se = r.std() / np.sqrt(len(r)) * 1e4
     mid = r.mean() * 1e4

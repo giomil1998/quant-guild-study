@@ -17,7 +17,7 @@ The full learning path (8 modules, ~80 lectures) is in **[ROADMAP.md](ROADMAP.md
 
 ## How I'm studying
 
-A 20-week plan at 2 hours a day ([study plan PDF](study/Study_Plan.pdf)). Each project starts as a notebook of tasks with self-checking checkpoints. I write the code, then extend the idea on real data. Progress is in the [learning log](study/LEARNING_LOG.md).
+A 21-week plan at 2 hours a day ([study plan PDF](study/Study_Plan.pdf)). Each project starts as a notebook of tasks with self-checking checkpoints. I write the code, then extend the idea on real data. Progress is in the [learning log](study/LEARNING_LOG.md).
 
 ## Run it yourself
 

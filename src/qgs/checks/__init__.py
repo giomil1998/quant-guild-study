@@ -37,5 +37,30 @@ def call(fn, *args, **kwargs):
         return None, f"{type(exc).__name__}: {exc}"
 
 
+def as_scalar(value):
+    """A number from a number, or from a one-element array/list (e.g. fsolve's output)."""
+    arr = np.asarray(value, dtype=float)
+    if arr.size != 1:
+        raise ValueError(f"expected a single number, got an array of shape {arr.shape}")
+    return float(arr.reshape(()))
+
+
+def scalars(task, **values):
+    """Convert each named value to a float; report and return None if any isn't a single number."""
+    out = {}
+    for var, value in values.items():
+        try:
+            out[var] = as_scalar(value)
+        except (TypeError, ValueError):
+            shape = f"length {len(value)}" if hasattr(value, "__len__") else type(value).__name__
+            report(task, False, f"`{var}` should be a single number, got {type(value).__name__} ({shape})",
+                   "compute one summary number across all experiments, not one per experiment")
+            return None
+    return out
+
+
 def close(value, target, tol):
-    return value is not None and abs(float(value) - target) <= tol
+    try:
+        return value is not None and abs(as_scalar(value) - target) <= tol
+    except (TypeError, ValueError):
+        return False

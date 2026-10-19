@@ -101,37 +101,38 @@ def week_dates(n):
 PHASES = [
     ("Phase 1 · Edge, randomness and ruin", "What an edge is, how to measure it, and why bet size decides whether you survive it.", [
         (1, "P02 · Statistics problems in trading", "3", "Estimation error, non-stationarity, decomposing an edge. <i>Extension:</i> SPY's edge with a bootstrap confidence interval.", "4"),
-        (2, "P03 · Gambler's ruin", "28, 26", "Ruin probability: formula vs simulation. <i>Extension:</i> ruin risk of a leveraged SPY / EUR/USD strategy.", "34"),
-        (3, "P04 · Kelly, ergodicity, volatility drag", "36, 81, 136", "Growth-optimal sizing, time vs ensemble averages. <i>Extension:</i> Kelly leverage on SPY, full vs half Kelly.", "46, 60"),
+        (2, "R1 · Research sprint (private)", "—", "One-week feasibility study on your own FX options data, in a separate private repo: data inventory, matching, a first comparison. Then decide whether to go deeper.", "—"),
+        (3, "P03 · Gambler's ruin", "28, 26", "Ruin probability: formula vs simulation. <i>Extension:</i> ruin risk of a leveraged SPY / EUR/USD strategy.", "34"),
+        (4, "P04 · Kelly, ergodicity, volatility drag", "36, 81, 136", "Growth-optimal sizing, time vs ensemble averages. <i>Extension:</i> Kelly leverage on SPY, full vs half Kelly.", "46, 60"),
     ], "M1 · 4 projects live, profile README published, repo pinned"),
     ("Phase 2 · Probability and simulation toolkit", "The Monte Carlo and stochastic-process tools every later module uses.", [
-        (4, "P05 · Monte Carlo foundations", "1, 33, 61", "Inverse transform, law of large numbers, CLT, error bars on simulations.", "2"),
-        (5, "P06 · Brownian motion and GBM vs reality", "59, 135, 29", "Simulate ABM/GBM, Itô's lemma. <i>Extension:</i> calibrate GBM to SPY & EUR/USD and test it against fat tails (QQ plots).", "31, 37"),
-        (6, "P07 · Jumps and clustering", "82, 94", "Poisson and Hawkes processes. <i>Extension:</i> fit them to the arrival times of large-move days.", "71, 49"),
+        (5, "P05 · Monte Carlo foundations", "1, 33, 61", "Inverse transform, law of large numbers, CLT, error bars on simulations.", "2"),
+        (6, "P06 · Brownian motion and GBM vs reality", "59, 135, 29", "Simulate ABM/GBM, Itô's lemma. <i>Extension:</i> calibrate GBM to SPY & EUR/USD and test it against fat tails (QQ plots).", "31, 37"),
+        (7, "P07 · Jumps and clustering", "82, 94", "Poisson and Hawkes processes. <i>Extension:</i> fit them to the arrival times of large-move days.", "71, 49"),
     ], None),
     ("Phase 3 · Measuring performance and backtesting honestly", "How to tell skill from luck, and why most backtests lie.", [
-        (7, "P08 · Sharpe, CAGR, luck vs skill", "101, 125, 48, 96", "Sharpe ratio confidence intervals, deflated Sharpe, minimum track-record length.", "112"),
-        (8, "P09 · Backtesting honestly", "97, 77, 93", "A small walk-forward backtester with costs; a demonstration of overfitting.", "58, 118"),
-        (9, "Review and consolidation", "—", "Move reusable code into <font face='Courier'>qgs</font>, rewrite the README, mid-point portfolio review with Claude.", "—"),
-        (10, "Holiday buffer", "—", "Catch up on unfinished tasks, or rest. Both count.", "—"),
+        (8, "P08 · Sharpe, CAGR, luck vs skill", "101, 125, 48, 96", "Sharpe ratio confidence intervals, deflated Sharpe, minimum track-record length.", "112"),
+        (9, "P09 · Backtesting honestly", "97, 77, 93", "A small walk-forward backtester with costs; a demonstration of overfitting.", "58, 118"),
+        (10, "Review and consolidation", "—", "Move reusable code into <font face='Courier'>qgs</font>, rewrite the README, mid-point portfolio review with Claude.", "—"),
+        (11, "Holiday buffer", "—", "Catch up on unfinished tasks, or rest. Both count.", "—"),
     ], "M2 · 8 projects live, helpers refactored, README case-study style"),
     ("Phase 4 · Option pricing", "Black-Scholes from several angles, then beyond it.", [
-        (11, "P10 · Black-Scholes three ways", "83, 19, 73", "Closed form, Monte Carlo, risk-neutral argument; convergence and error.", "18, 6, 67"),
-        (12, "P11 · Finite differences and exotics", "38, 32", "Explicit / implicit / Crank-Nicolson; barrier and Asian options.", "—"),
-        (13, "P12 · Heston and FFT pricing", "39, 89", "Carr-Madan FFT; the smile Heston generates; implied-vol inversion.", "107"),
+        (12, "P10 · Black-Scholes three ways", "83, 19, 73", "Closed form, Monte Carlo, risk-neutral argument; convergence and error.", "18, 6, 67"),
+        (13, "P11 · Finite differences and exotics", "38, 32", "Explicit / implicit / Crank-Nicolson; barrier and Asian options.", "—"),
+        (14, "P12 · Heston and FFT pricing", "39, 89", "Carr-Madan FFT; the smile Heston generates; implied-vol inversion.", "107"),
     ], None),
     ("Phase 5 · Trading options and volatility (your home ground)", "Where your FX options research gives you an edge over most portfolios.", [
-        (14, "P13 · Delta hedging and Greeks P&amp;L", "9, 11", "Hedging error vs rebalancing frequency; gamma/theta P&amp;L attribution.", "7"),
-        (15, "P14 · Implied-vol surface from free data", "30, 23", "Build SPY's IV surface from yfinance chains: smile, skew, term structure.", "24"),
-        (16, "P15 · Volatility risk premium", "119, 43", "VIX-implied vs realised SPY variance since 1990; implied-vol crush around earnings.", "106, 113"),
+        (15, "P13 · Delta hedging and Greeks P&amp;L", "9, 11", "Hedging error vs rebalancing frequency; gamma/theta P&amp;L attribution.", "7"),
+        (16, "P14 · Implied-vol surface from free data", "30, 23", "Build SPY's IV surface from yfinance chains: smile, skew, term structure.", "24"),
+        (17, "P15 · Volatility risk premium", "119, 43", "VIX-implied vs realised SPY variance since 1990; implied-vol crush around earnings.", "106, 113"),
     ], "M3 · 15 projects; options section is the portfolio's centrepiece"),
     ("Phase 6 · Time series and portfolios", "Volatility models, regimes and portfolio construction.", [
-        (17, "P16 · GARCH and regimes", "44, 47, 51", "GARCH on EUR/USD; hidden Markov regimes on SPY.", "92"),
-        (18, "P17 · Portfolio construction", "20, 100, 17", "Why mean-variance is unstable; Black-Litterman; PCA on ETF returns.", "78, 128"),
+        (18, "P16 · GARCH and regimes", "44, 47, 51", "GARCH on EUR/USD; hidden Markov regimes on SPY.", "92"),
+        (19, "P17 · Portfolio construction", "20, 100, 17", "Why mean-variance is unstable; Black-Litterman; PCA on ETF returns.", "78, 128"),
     ], None),
     ("Capstone", "One original project that ties the pieces together and shows how you think.", [
-        (19, "Capstone: design and build", "your choice", "Ideas: FX vs equity volatility risk premium · Kalman-filter mean reversion (95) · tail-risk hedging (126, 138).", "—"),
-        (20, "Capstone: finish and write up", "—", "Polished notebook, README case study, short LinkedIn/blog post.", "—"),
+        (20, "Capstone: design and build", "your choice", "Ideas: FX vs equity volatility risk premium · Kalman-filter mean reversion (95) · tail-risk hedging (126, 138).", "—"),
+        (21, "Capstone: finish and write up", "—", "Polished notebook, README case study, short LinkedIn/blog post.", "—"),
     ], "M4 · Capstone published; portfolio ready to show recruiters"),
 ]
 
@@ -141,7 +142,7 @@ story = []
 story += [
     Spacer(1, 30 * mm),
     P("Quant Guild Study Plan", "title"),
-    P(f"20 weeks · 2 hours a day · 6 days a week · starts Monday {START:%d %B %Y}", "subtitle"),
+    P(f"21 weeks · 2 hours a day · 6 days a week · starts Monday {START:%d %B %Y}", "subtitle"),
     callout("<b>Goal.</b> By March 2027, a public GitHub portfolio of ~16 quant finance projects plus one original capstone, "
             "each rebuilt from first principles on free data. Along the way: fluency in simulation, option pricing, "
             "volatility modelling and honest backtesting."),
@@ -152,7 +153,7 @@ story += [
         "2 · The daily 2-hour block and the weekly rhythm",
         "3 · Tools: PyCharm, Jupyter and git",
         "4 · Using Claude as your teacher",
-        "5 · The 20-week plan",
+        "5 · The 21-week plan",
         "6 · Definition of done and milestone tracker",
     ]),
     Spacer(1, 10 * mm),
@@ -270,8 +271,8 @@ story += [
 ]
 
 # --------------------------------------------------------------- plan
-story.append(P("5 · The 20-week plan", "h1"))
-story.append(P("<b>Build</b> = full portfolio project with a starter notebook. <b>Study</b> = watch, plus an optional 20-minute scratch exercise; no portfolio entry. Numbers are Quant Guild lecture numbers (see ROADMAP.md for links).", "muted"))
+story.append(P("5 · The 21-week plan", "h1"))
+story.append(P("<b>Build</b> = full portfolio project with a starter notebook. <b>Study</b> = watch, plus an optional 20-minute scratch exercise; no portfolio entry. <b>Research</b> = a sprint on your own data, kept in a private repo. Numbers are Quant Guild lecture numbers (see ROADMAP.md for links).", "muted"))
 for name, blurb, weeks, milestone in PHASES:
     rows = [["Wk", "Dates", "Build project", "Lectures", "Focus", "Study"]]
     for wk, proj, lec, focus, study in weeks:
@@ -284,11 +285,11 @@ for name, blurb, weeks, milestone in PHASES:
 
 story += [
     KeepTogether([
-        P("After week 20", "h2"),
+        P("After week 21", "h2"),
         P("Module 8 (machine learning and market making: lectures 13, 16, 35, 63, 65, 69) and the remaining lectures in ROADMAP.md, "
           "at your own pace. By then you'll know the workflow well enough to plan it yourself."),
     ]),
-    Spacer(1, 10),
+    PageBreak(),
 ]
 
 # --------------------------------------------------------------- done + tracker
@@ -309,10 +310,10 @@ story += [
     P("Milestone tracker", "h2"),
     table([
         ["", "Milestone", "Target", "Done on"],
-        ["☐", "<b>M1</b> · 4 projects live, profile README, repo pinned", week_dates(3).split(" – ")[1], ""],
-        ["☐", "<b>M2</b> · 8 projects, helpers refactored, README rewritten", week_dates(9).split(" – ")[1], ""],
-        ["☐", "<b>M3</b> · 15 projects, options section complete", week_dates(16).split(" – ")[1], ""],
-        ["☐", "<b>M4</b> · Capstone published, portfolio ready for recruiters", week_dates(20).split(" – ")[1], ""],
+        ["☐", "<b>M1</b> · 4 projects live, profile README, repo pinned", week_dates(4).split(" – ")[1], ""],
+        ["☐", "<b>M2</b> · 8 projects, helpers refactored, README rewritten", week_dates(10).split(" – ")[1], ""],
+        ["☐", "<b>M3</b> · 15 projects, options section complete", week_dates(17).split(" – ")[1], ""],
+        ["☐", "<b>M4</b> · Capstone published, portfolio ready for recruiters", week_dates(21).split(" – ")[1], ""],
     ], [10 * mm, 110 * mm, 25 * mm, 25 * mm]),
     Spacer(1, 12),
     P("Skills you'll be able to show at the end", "h2"),

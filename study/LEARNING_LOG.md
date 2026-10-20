@@ -65,3 +65,28 @@ One entry per session, newest first. Takes 5 minutes and pays off: the recall qu
 1.
 2.
 3.
+
+---
+
+## 2026-10-20 · Week 1, day 2 · Project P02
+
+**Recall (from memory, before checking):**
+1. Q: Why can't more data push the error of p̂ (vs 0.5) below 0.1 when p_true moves? Which term of the law of total variance is responsible? → A:
+2. Q: A strategy wins +115 or loses −150. What win rate does it need to break even, and how do you derive it? → A:
+3. Q: Why does the edge from the law of total expectation equal the plain average P/L? → A:
+
+**Today's tasks:**
+| Time | Block | Task |
+|---|---|---|
+| 0:00 – 0:10 | Recall | Answer the 3 questions above from memory, then check |
+| 0:10 – 0:15 | Catch-up | Fill in yesterday's *Did / Confused by*, then commit your Task 3.1–3.2 work |
+| 0:15 – 1:00 | Build | Task 3.3 (1,000 simulated years; **predict the losing-year share first**) and Task 3.4 (Beta posterior) + the Part 3 ✍️ answer |
+| 1:00 – 1:45 | Build | Task 4.1 (SPY edge decomposition) and Task 4.2 (bootstrap CI) |
+| 1:45 – 2:00 | Ship | Commit, fill in below. Task 4.3 + leftovers (Task 1.2 bins/legend, Task 1.3 numbers) go to tomorrow |
+
+**Did:**
+**Confused by:**
+**Questions for tomorrow:**
+1.
+2.
+3.
